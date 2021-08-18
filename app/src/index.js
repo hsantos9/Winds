@@ -14,10 +14,10 @@ Raven.config(config.sentry, {
 
 window.streamClient = stream.connect(config.stream.apiKey, null, config.stream.appID);
 
-window.streamAnalyticsClient = new StreamAnalytics({
-	apiKey: config.stream.apiKey,
-	token: config.stream.analyticsKey,
-});
+// window.streamAnalyticsClient = new StreamAnalytics({
+// 	apiKey: config.stream.apiKey,
+// 	token: config.stream.analyticsKey,
+// });
 
 Raven.context(() => {
 	ReactDOM.render(<App />, document.getElementById('root'));
